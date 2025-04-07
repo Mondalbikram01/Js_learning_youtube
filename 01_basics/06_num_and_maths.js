@@ -52,8 +52,8 @@ console.log((Math.random()*10) +1);
 console.log(Math.floor((Math.random()*10) +1));
 // you can get single number by this way from random
 
-const min = 2
-const max = 7
+const min = 1
+const max = 6
 const diseNumber = Math.floor(Math.random() * (max - min + 1)) + min 
 // here you add min as you need the minimum number
 console.log(diseNumber);
