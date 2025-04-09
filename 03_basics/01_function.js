@@ -61,4 +61,58 @@ function loginUserMessage_2(username){
         return `${username} just logged in`
     }
 }
-console.log(loginUserMessage_2("Bikram"));
+// console.log(loginUserMessage_2("Bikram"));
+
+
+
+// some complex case
+// ... 3 dot is rest operator and also spread operator based on use case
+//case is when you don't know how many number or paramiter will be needed
+function calculateCartPrice(...num1){
+    return num1//it will give you an array. the rest operator make an array of all argument 
+}
+// console.log(calculateCartPrice(100, 200, 300, 400));
+// we will learn how to deal with that array leter
+// another important case
+function calculateCartPrice_1(val1, val2,...num1){
+    return num1//it will give you an array. the rest operator make an array of all argument 
+}
+// console.log(calculateCartPrice_1(100, 200, 300, 400));//according to this arrgument the 100 goes to val1 and 200 will go val2 and others will go inside rest operator and make an array 
+
+// lets deal with object 
+const user = {
+    username: "Bikram",
+    price: 123
+}
+function handleObject(anyobject){
+    console.log(`username is ${anyobject.username} and price is ${anyobject.price}`);//value get by dot key
+}
+// handleObject(user)//as i console inside i don't need to console here
+//inside parenthesis the user is the object name from where i am getting the result
+
+// case of type safety
+const user_1 = {
+    username: "Bikram",
+    prices: 123//i change it to prices
+}
+function handleObject(anyobject){
+    console.log(`username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+// handleObject(user_1)//here the price result will be undefined
+// to avoid this type of error you need to check that is the object element present or not which you are getting
+
+// you can pass the object this way . don't need to cheate it before
+handleObject({
+    username: "sam",
+    price: 33
+})
+
+// let array handle
+const myNewArray = [400, 500, 600, 700]
+function handleArray(anyArray){
+    return anyArray[2]//indexing wise i return the third value 
+}
+// console.log(handleArray(myNewArray));
+
+// dont need to create array before
+console.log(handleArray([900,1000,1200,1400]));
