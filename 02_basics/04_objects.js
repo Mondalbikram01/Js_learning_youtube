@@ -62,12 +62,36 @@ const users = [
 // then how will you get this?..this way
 // console.log(users[1].id);
 
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));//this is very important. it will give you the result in array which you can use in any loop or anywhere
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));//this is very important. it will give you the result in array which you can use in any loop or anywhere
 // same way 
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));//it will make all key value into array form
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));//it will make all key value into array form
 
 // when you check any specific property is present inside 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));//gives you boolean value
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));//gives you boolean value
+
+
+// ..........................destructuring.......................................
+
+const course = {
+    courseName : "javaScript",
+    price : 999,
+    courseInstructor : "Bikram"
+}
+// now when you use values , usualy you do this 
+// console.log(course.courseInstructor);//it is so long . you can do this given below
+
+const {courseInstructor: instructor} = course//syntax is const {which you extracting : desired name(optional)} = place from where you are extracting.
+// console.log(courseInstructor);//do check when optional name is not present
+console.log(instructor);
+//desstructuring concept will help you in react very much
+
+
+// .................brief api
+// most of the time you get api response data in object format but many times you may get it in array format
+// api web site name is "randomuser me api" free
+// copy any api response from the above api website and after this you need to study the response for few min. to do so go "json formater"
+// paste the response and do converte and select the type to see . here tree is the good one 
+
 
