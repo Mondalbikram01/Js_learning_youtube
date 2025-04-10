@@ -34,3 +34,18 @@ console.log(0 == "");
 
 
 // Nullish Coalescing Operator (??): null undefined
+// the first value will be printed except null and undefined
+// let val1;
+// val1 = 5 ?? 10
+// val1 = null ?? 10
+// val1 = undefined ?? 15
+// val1 = null ?? 10 ?? 20
+// console.log(val1);
+
+//above and below both are different
+
+// Terniary Operator
+// syntax (condition)? true : false
+// sortly work like if else 
+const iceTeaPrice = 100
+iceTeaPrice >= 80 ? console.log("the price is greater than 80") : console.log("the price is less than 80")
