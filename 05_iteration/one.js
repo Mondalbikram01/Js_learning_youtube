@@ -70,4 +70,4 @@ for (let i = 1; i <= 20; i++) {
         console.log(`value of i is ${i}`);
         
 }
-// continue skip the particular condition and run the process after it . it doesn't print particular condition
+// continue skip the particular condition and run the process after it . it doesn't print the particular condition
