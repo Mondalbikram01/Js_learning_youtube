@@ -11,3 +11,11 @@ while (arr < myArray.length) {
     console.log(`hero name ${myArray[arr]}`)   
     arr = arr + 1
 }
+
+// do while loop ++++++
+// first work then condition check
+let score = 0
+do {
+    console.log(`score value is ${score}`);
+    score++
+} while (score <= 10);
