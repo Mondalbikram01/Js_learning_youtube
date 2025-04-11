@@ -35,6 +35,39 @@
 // }
 // here outer loop 1 time = inner loop 10 times
 
-for (let i = 0; i <= 10; i++) {
-        console.log(i);//no need to store any where
+// for (let i = 0; i <= 10; i++) {
+//         console.log(i);//no need to store any where
+// }
+
+
+let myArray = ["flash", "batman", "suparman"]
+for (let index = 0; index < myArray.length; index++) {
+        const element = myArray[index];
+        // console.log(element);
+        
 }
+
+// to shop a loop use ctrl + c
+
+// important concept for loop
+// break and continue
+
+for (let i = 1; i <= 20; i++) {
+        if(i == 5){
+                // console.log("detected 5");
+                break;
+        }
+        // console.log(`value of i is ${i}`);
+        
+}
+// break keywords stop the execution  and come out from that scope 
+
+for (let i = 1; i <= 20; i++) {
+        if(i == 5){
+                console.log("detected 5");
+                continue;
+        }
+        console.log(`value of i is ${i}`);
+        
+}
+// continue skip the particular condition and run the process after it . it doesn't print particular condition
