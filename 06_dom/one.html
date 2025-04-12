@@ -3,7 +3,10 @@
  start your live server , go command panel then search live server next active live server-->
  <!-- lets learn how to tergat the element. all the will be on browser console -->
   <!-- take access on full html document by document and then dot mehtod name with parenthesis. give the id name inside parenthesis -->
-   <!-- document.getElementById('') -->
+   <!-- document.getElementById(''), you can do many methods after this by dot method name like 
+     document.getElementById('title').id,
+     document.getElementById('title').getAttribute('id'), this is getattribute ,
+     document.getElementById('title').setAttribute('class' 'task'), this will set attribute name which you put inside. fisrt cotation is the attribute name and second cotation is the given name. remember it will overwrite the last name,-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +22,33 @@
 </head>
 <body class="bg-black">
 <div>
-    <h1 id="title" class="heading">DOM learning on chai aur code</h1>
+    <h1 id="title" class="heading">DOM learning on chai aur code <span>text test</span></h1>
     <p>Lorem ipsum dolor sit amet.</p>
+    <p>nothing</p>
 </div>
 </body>
 </html>
+<!--
+ all console work written here. it will not affect the main code , just chenges the browser code.
+ document.getElementById('title')
+<h1 id=​"title" class=​"heading">​DOM learning on chai aur code​</h1>​
+const title = document.getElementById('title')
+undefined
+title
+title.style.backgroundColor = "green"
+'green'
+title.style.padding = "15px"
+'15px'
+title.style.borderRadius = "15px"
+'15px'
+-->
+<!-- 
+title
+<h1 id=​"title" class=​"heading" style=​"background-color:​ green;​ padding:​ 15px;​ border-radius:​ 15px;​">​DOM learning on chai aur code​</h1>​
+title.textContent
+'DOM learning on chai aur code'
+title.innerHTML
+'DOM learning on chai aur code'
+title.innerText
+'DOM learning on chai aur code' 
+-->
