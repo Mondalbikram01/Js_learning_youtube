@@ -24,6 +24,9 @@
 <body class="bg-black">
 <div>
     <h1 id="title" class="heading">DOM learning on chai aur code <span style="display: none;">text test</span></h1>
+    <h2>Lorem, ipsum dolor.</h2>
+    <h2>Lorem, ipsum dolor.</h2>
+    <h2>Lorem, ipsum dolor.</h2>
     <p>Lorem ipsum dolor sit amet.</p>
     <p>nothing</p>
 </div>
@@ -53,9 +56,15 @@ title.innerHTML
 title.innerText
 'DOM learning on chai aur code' 
 -->
-<!-- after adding span and its style
+<!-- after adding span and its style.(see the difference)
  title.innerText
 'DOM learning on chai aur code'
 title.textContent
 'DOM learning on chai aur code text test'
+ title.innerHTML
+'DOM learning on chai aur code <span style="display: none;">text test</span>'
+-->
+<!-- 
+document.getElementsByClassName('heading')
+HTMLCollection [h1#title.heading, title: h1#title.heading]
  -->
