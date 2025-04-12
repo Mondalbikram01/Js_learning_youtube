@@ -7,6 +7,7 @@
      document.getElementById('title').id,
      document.getElementById('title').getAttribute('id'), this is getattribute ,
      document.getElementById('title').setAttribute('class' 'task'), this will set attribute name which you put inside. fisrt cotation is the attribute name and second cotation is the given name. remember it will overwrite the last name,-->
+     <!-- add,commit and push na korle o live server cholbe. jodi problem kore tahole autoSave check koro, live server extension re run koro, then abar live server chalu koro -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +23,7 @@
 </head>
 <body class="bg-black">
 <div>
-    <h1 id="title" class="heading">DOM learning on chai aur code <span>text test</span></h1>
+    <h1 id="title" class="heading">DOM learning on chai aur code <span style="display: none;">text test</span></h1>
     <p>Lorem ipsum dolor sit amet.</p>
     <p>nothing</p>
 </div>
@@ -52,3 +53,9 @@ title.innerHTML
 title.innerText
 'DOM learning on chai aur code' 
 -->
+<!-- after adding span and its style
+ title.innerText
+'DOM learning on chai aur code'
+title.textContent
+'DOM learning on chai aur code text test'
+ -->
