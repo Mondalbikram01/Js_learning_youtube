@@ -17,5 +17,22 @@
         document.querySelector('.language').appendChild(li)
     }
     addLanguage("python")
+    addLanguage("typescript")
+    // if you do this way , there is a problem as the browser has to traverse full DOM tree and then add the element. in large level this will make an issue. 
+    // some optimise approach
+    function addOptiLanguage (langName) {
+        const li = document.createElement("li")
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage("golang") 
+    // RECOMENDATION: use appendChild instead innerHTML
+
+
+    // Edit+++++++
+    const secondLang = document.querySelector("li:nth-child(2)")
+    const newli = document.createElement('li')
+    newli.textContent = "mojo"
+    secondLang.replaceWith(newli)
 </script>
 </html>
