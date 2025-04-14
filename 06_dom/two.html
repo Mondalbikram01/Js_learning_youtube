@@ -19,11 +19,22 @@
     // console.log(parent);
     // console.log(parent.children);
     // console.log(parent.children[1].innerHTML);
-    for (let i = 0; i < parent.children.length; i++) {
-        console.log(parent.children[i].innerHTML);
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
         
-    }
+    // }
     parent.children[1].style.color = "orange"
+    // this way you go from parent to child
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    // this way you go from child to  parent
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne);
+    console.log(dayOne.parentElement);//go to parent element
+    console.log(dayOne.nextElementSibling);// go to brother element
+
+    console.log("NODES :",parent.childNodes);//it is a comples tree structure run by browser in background. here every line breaks also count. so thats why it is counted more than the elements inside parent.
 
 </script>
 </html>
