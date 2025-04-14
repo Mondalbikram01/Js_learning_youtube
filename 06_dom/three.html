@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    // lets create element
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)//here we use math function just for fun. it will give you random id
+    // you can set many attribute by the given way
+    div.setAttribute("title","generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // prefer the setAttribute and something like this nodelist elements.(all are this are optimise approach)
+    const addText = document.createTextNode("chai aur code")
+    div.appendChild(addText)
+
+    // lets attach all this inside page
+    document.body.appendChild(div)
+
+
+</script>
+</html>
