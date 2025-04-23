@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Amazing images</h1>
+    <div style="background-color: #414141; color: aliceblue;" >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // important events you need to learn
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+//best way to use event
+document.getElementById('owl').addEventListener('click', function(e){
+    // alert('owl clicked')
+    // console.log(e)//this will print all prototype in console, all events
+},false)
+//here false is event propogation. Two types of event propogation is event bubbling and capturing . false(default) value comes from bubbling.
+// inside to outside is bubling. inside code activated first then outside code.
+document.getElementById('images').addEventListener('click', function(e){
+    // console.log("clicked inside the ul")
+},false)
+
+document.getElementById('owl').addEventListener('click', function(e){
+    // console.log("owl clicked")
+},false)
+// make the propogation true  to see capturing propogation. this all are use cases.
+// when you dont want to propogate ..
+document.getElementById('owl').addEventListener('click', function(e){
+    console.log("owl clicked")
+    e.stopPropagation()
+},false)
+
+
+</script>
+</html>
