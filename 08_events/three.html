@@ -14,13 +14,7 @@
     const sayDate = function(){
         console.log('hi', Date.now());
     }
-    // first create a function of some action then set the interval of that action
-    const reject = setInterval(sayDate, 2000);
-
-    document.querySelector('#stop').addEventListener('click', function(){
-        clearInterval(reject);
-        console.log('STOPPED');
-    })
+   
 
 </script>
 </html>
