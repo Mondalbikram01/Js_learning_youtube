@@ -41,10 +41,23 @@ document.getElementById('owl').addEventListener('click', function(e){
 // make the propogation true  to see capturing propogation. this all are use cases.
 // when you dont want to propogate ..
 document.getElementById('owl').addEventListener('click', function(e){
-    console.log("owl clicked")
-    e.stopPropagation()
+    // console.log("owl clicked")
+    // e.stopPropagation()
+},false)
+// prevent default
+document.getElementById('google').addEventListener('click', function(e){
+    // console.log("google clicked")
+    e.preventDefault();
+    e.stopPropagation();
 },false)
 
+document.querySelector('#images').addEventListener('click', function(e){
+    console.log(e.target.tagName);
+   if (e.target.tagName === 'IMG') {
+    let removeIt = e.target.parentNode
+    removeIt.remove();
+   }
+})
 
 </script>
 </html>
