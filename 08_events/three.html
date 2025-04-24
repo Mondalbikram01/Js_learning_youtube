@@ -14,7 +14,25 @@
     const sayDate = function(){
         console.log('hi', Date.now());
     }
-   
+   let intervalId = null;//the setInterval value passes inside it
 
+   document.querySelector('#start').addEventListener('click', function(){
+    if(intervalId === null){
+        intervalId = setInterval(sayDate, 2000);
+        console.log('STARTED');
+    }else {
+        console.log(" a interval is alredy exist");
+    }
+   })
+
+   document.querySelector('#stop').addEventListener('click', function(){
+    if(intervalId !== null){
+        clearInterval(intervalId);//you need to pass variable inside clearInterval
+        intervalId = null;
+        console.log('STOPPED');
+    }else {
+        console.log("no interval is running");
+    }
+   })
 </script>
 </html>
