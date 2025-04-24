@@ -21,5 +21,5 @@ const stopColorChange = function(){
         intervalId = null;
         alert("stoped");
 }
-document.querySelector('#star').addEventListener('click', startColorChange);
+document.querySelector('#start').addEventListener('click', startColorChange);
 document.querySelector('#stop').addEventListener('click',stopColorChange);
