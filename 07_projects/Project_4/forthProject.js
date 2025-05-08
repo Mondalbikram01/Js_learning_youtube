@@ -1,4 +1,6 @@
-let randomNum = Math.floor(Math.random() * 10 + 1)
+let max = 20;
+let min = 1;
+let randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
 console.log(randomNum);
 
 const UserNum = document.querySelector('#guessField');
@@ -28,8 +30,8 @@ if(playGame){
 function validateGuess(guess){
     if(isNaN(guess)){
         alert('pls enter a valid number');
-    }else if(guess < 1 || guess > 10){
-        alert('pls enter the number between 1-10');
+    }else if(guess < 1 || guess > 20){
+        alert('pls enter the number between 1-20');
     }else{
         prevGuess.push(guess);
         if(numGuess === 5){
@@ -81,7 +83,7 @@ function endGame(game){
 function newGame(game){
     const newGameButton = document.querySelector('#newGame');
     newGameButton.addEventListener('click', function(e){
-        randomNum = Math.floor(Math.random() * 10 + 1);
+        randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
         prevGuess = [];
         numGuess = 1;
         guessList.innerHTML = '';
